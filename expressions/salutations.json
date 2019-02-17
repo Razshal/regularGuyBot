@@ -1,0 +1,42 @@
+{
+    "isLightTalk": true,
+
+    "1": [
+        "hi",
+        "hello",
+        "salut",
+        "yo",
+        "cc",
+        "coucou",
+        "slt",
+        "heyo",
+        "hiya",
+        "heya"
+    ],
+
+    "2": [
+        "ça va ?",
+        "bien ?",
+        "tranquille ?",
+        "trkl ?",
+        "comment allez vous ?",
+        "et toi ?"
+    ],
+
+    "3": [
+        "ouais",
+        "bien et toi ?",
+        "oui ça va, et toi ?",
+        "tranquille et toi ?"
+    ],
+
+    "4": [
+        "ça va comme un lundi",
+        "ouais tranquille",
+        "pas trop mal",
+        "oui",
+        "ça va",
+        "ça peut aller",
+        "on fait aller"
+    ]
+}
