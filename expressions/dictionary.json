@@ -1,0 +1,77 @@
+{
+    "amusé": [
+        "mdr",
+        "ptdrrrr",
+        "j'adore",
+        "chaud"
+    ],
+
+    "default": [
+        "haha",
+        "XD",
+        "^^",
+        ":3",
+        ":)",
+        ":D",
+        "=D"
+    ],
+
+    "salut": [
+        "hi",
+        "hello",
+        "salut",
+        "yo",
+        "yoo",
+        "yooo",
+        "cc",
+        "coucou",
+        "slt",
+        "heyo",
+        "hiya",
+        "heya",
+        "bonjour",
+        "bonsoir",
+        "'soir",
+        "'jour",
+        "wsh",
+        "wesh"
+    ],
+
+    "ça va": [
+        "ça va ?",
+        "bien ?",
+        "tranquille ?",
+        "trkl ?",
+        "comment ça va ?",
+        "et toi ?"
+    ],
+
+    "et toi": [
+        "bien et toi ?",
+        "oui ça va, et toi ?",
+        "tranquille et toi ?",
+        "et toi ?"
+    ],
+
+    "oui ça va": [
+        "ça va comme un lundi",
+        "ouais tranquille",
+        "pas trop mal",
+        "oui",
+        "ça va",
+        "oui ça va",
+        "ça peut aller",
+        "on fait aller"
+    ],
+
+    "tu fais quoi": [
+        "tu fais quoi ?",
+        "il fait beau chez toi ?"
+    ],
+
+    "rien de spécial": [
+        "rien de spécial",
+        "bah je te parle",
+        "j'étais sur internet"
+    ]
+}

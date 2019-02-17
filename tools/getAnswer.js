@@ -2,42 +2,45 @@ module.exports = class Answerer
 {
     constructor() {
         this.fs = require("fs")
-        this.salutations = JSON.parse(this.fs.readFileSync("expressions/salutations.json"))
-        this.answers = JSON.parse(this.fs.readFileSync("expressions/answers.json"))
+        this.answers = JSON.parse(this.fs.readFileSync("expressions/dictionary.json"))
+        this.howToAnswer = JSON.parse(this.fs.readFileSync("expressions/howToAnswer.json"))
     }
 
     random_item(items) {
+        console.log(items)
         return items[Math.floor(Math.random()*items.length)];
+    }
+
+    prepareText(text) {
+        return text.trim()
+        .replace(/ /g,'')
+        .toLowerCase()
     }
 
     getAnswer(text = "") {
         console.log('------------------\n'+ text)
 
         if (typeof text == "object")
-            return this.random_item(this.answers["interjections"]);
+            return this.random_item(this.answers["default"]);
 
-        text = text.trim()
-            .replace(/ /g,'')
-            .toLowerCase()
-        let salut = this.isSalutation(text)
+        text = this.prepareText(text)
 
-        return salut ?
-            this.random_item(this.salutations[salut]) 
-                : this.random_item(this.answers["interjections"])
+        console.log(this.howToAnswer)
+
+        return this.searchAnswerInDictionary(text)
     }
 
-    isSalutation(text) {
-        let iter = 1;
+    searchAnswerInDictionary(text) {
+        let key = this.howToAnswer[this.whatIsIt(text)]
+        return this.random_item(this.answers[key]);
+    }
 
-        while (this.salutations[iter]) {
-            if (this.salutations[iter++].some((substring) => text.includes(substring.trim().replace(/ /g,'')))) {
-                return this.salutations[iter] ? iter : false
+    whatIsIt(text) {
+        for (let key in this.answers) {
+            if (this.answers[key].some((substring) => text.includes(substring.trim().replace(/ /g,'')))) {
+                return key
             }
         }
-        return false
-    }
-
-    isChitChat(text) {
-        return !this.isSalutation(text)
+        return "default"
     }
 }
