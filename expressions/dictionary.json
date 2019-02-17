@@ -66,12 +66,18 @@
 
     "tu fais quoi": [
         "tu fais quoi ?",
-        "il fait beau chez toi ?"
+        "tu fais un truc ?"
     ],
 
     "rien de spécial": [
         "rien de spécial",
         "bah je te parle",
-        "j'étais sur internet"
+        "j'étais sur internet",
+        "je m'ennuie"
+    ],
+
+    "tu veux faire un truc": [
+        "tu veux faire un truc ?",
+        "tu veux qu'on fasse quelque chose ?"
     ]
 }

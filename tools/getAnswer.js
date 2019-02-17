@@ -10,10 +10,14 @@ module.exports = class Answerer
         return items[Math.floor(Math.random()*items.length)];
     }
 
+    randomlyAddEmoji() {
+        return (Math.floor(Math.random() * 10) + 1) == 10 ? this.searchAnswerInDictionary("XD") : ""
+    }
+
     prepareText(text) {
         return text.trim()
-        .replace(/ /g,'')
-        .toLowerCase()
+            .replace(/ /g,'')
+            .toLowerCase()
     }
 
     getAnswer(text = "") {
@@ -24,7 +28,7 @@ module.exports = class Answerer
 
         text = this.prepareText(text)
 
-        return this.searchAnswerInDictionary(text)
+        return this.searchAnswerInDictionary(text) + " " + this.randomlyAddEmoji()
     }
 
     searchAnswerInDictionary(text) {
