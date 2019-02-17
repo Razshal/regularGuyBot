@@ -16,13 +16,14 @@ module.exports = class Answerer
         if (typeof text == "object")
             return this.random_item(this.answers["interjections"]);
 
-        text = text.trim().replace(/ /g,'')
+        text = text.trim()
+            .replace(/ /g,'')
+            .toLowerCase()
         let salut = this.isSalutation(text)
-        salut = this.salutations[salut] ? salut : false
-        
+
         return salut ?
             this.random_item(this.salutations[salut]) 
-            : this.random_item(this.answers["interjections"])
+                : this.random_item(this.answers["interjections"])
     }
 
     isSalutation(text) {
