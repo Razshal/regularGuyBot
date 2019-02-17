@@ -7,7 +7,6 @@ module.exports = class Answerer
     }
 
     random_item(items) {
-        console.log(items)
         return items[Math.floor(Math.random()*items.length)];
     }
 
@@ -25,8 +24,6 @@ module.exports = class Answerer
 
         text = this.prepareText(text)
 
-        console.log(this.howToAnswer)
-
         return this.searchAnswerInDictionary(text)
     }
 
@@ -37,7 +34,7 @@ module.exports = class Answerer
 
     whatIsIt(text) {
         for (let key in this.answers) {
-            if (this.answers[key].some((substring) => text.includes(substring.trim().replace(/ /g,'')))) {
+            if (this.answers[key].some((substring) => text.includes(this.prepareText(substring)))) {
                 return key
             }
         }
