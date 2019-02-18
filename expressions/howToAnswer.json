@@ -1,6 +1,7 @@
 {
     "default": "default",
     "salut": "ça va",
+	"salut ça va": "et toi",
     "ça va": "et toi",
     "et toi": "oui ça va",
     "oui ça va": "tu fais quoi",
