@@ -47,8 +47,7 @@
         "bien ?",
         "tranquille ?",
         "trkl ?",
-        "comment ça va ?",
-        "et toi ?"
+        "comment ça va ?"
     ],
 
     "et toi": [
@@ -79,7 +78,8 @@
         "rien de spécial",
         "bah je te parle",
         "j'étais sur internet",
-        "je m'ennuie"
+        "je m'ennuie",
+        "rien"
     ],
 
     "tu veux faire un truc": [
